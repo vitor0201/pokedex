@@ -1,0 +1,44 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host {
+  img {
+    width: rem-calc(20);
+    margin: rem-calc(10);
+  }
+
+  form {
+    border-radius: rem-calc(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: rem-calc(15), rem-calc(20);
+  }
+
+  input {
+    width: 95%;
+    background: none;
+    border: none;
+    padding-left: rem-calc(20);
+    font-size: rem-calc(18);
+    color: var(--branco);
+
+    &::placeholder {
+      color: var(--branco);
+    }
+  }
+
+  img {
+    width: rem-calc(10);
+  }
+
+  @media (max-width: 800px) {
+    form {
+      position: relative;
+
+      display: flex;
+      width: calc(50% - 1rem);
+    }
+  }
+}
